@@ -9,7 +9,7 @@ const port = process.env.port || 5000
 
 app.set('view engine', 'ejs')
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 app.use(cookieParser())
 app.use(cors())
