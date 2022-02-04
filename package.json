@@ -1,27 +1,39 @@
 {
-  "dependencies": {
-    "express": "^4.17.2",
-    "serverless-http": "^2.7.0"
-  },
   "name": "test",
-  "description": "",
   "version": "1.0.0",
-  "main": "./functions/server.mjs",
-  "devDependencies": {
-    "netlify-cli": "^8.15.5"
-  },
+  "description": "",
+  "main": "server.mjs",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "type": "module",
   "scripts": {
-    "start": "NODE_ENV=development ./node_modules/.bin/netflify-lambda serve functions",
-    "build": "NODE_ENV=production ./node_modules/.bin/netflify-lambda serve functions"
+    "devStart": "nodemon server.mjs",
+    "start": "nodemon server.mjs",
+    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shanon-richet/test.git"
-  },
-  "author": "",
+  "keywords": [
+    "app"
+  ],
+  "author": "Shanon Richet",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shanon-richet/test/issues"
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   },
-  "homepage": "https://github.com/shanon-richet/test#readme"
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "node-postgres": "^0.6.2",
+    "pg": "^8.7.1"
+  },
+  "engines": {
+    "node": "16.X"
+  },
+  "eslintConfig": {
+    "globals": {
+      "window": true
+    }
+  }
 }
