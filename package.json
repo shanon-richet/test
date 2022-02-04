@@ -6,13 +6,13 @@
   "name": "test",
   "description": "",
   "version": "1.0.0",
-  "main": "/functions/server.mjs",
+  "main": "./functions/server.mjs",
   "devDependencies": {
     "netlify-cli": "^8.15.5"
   },
   "scripts": {
-    "server": "NODE_ENV=development ./node_modules/.bin/netflify-lambda serve functions",
-    "build": "NODE_ENV=development ./node_modules/.bin/netflify-lambda serve functions"
+    "start": "NODE_ENV=development ./node_modules/.bin/netflify-lambda serve functions",
+    "build": "NODE_ENV=production ./node_modules/.bin/netflify-lambda serve functions"
   },
   "repository": {
     "type": "git",
