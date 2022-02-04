@@ -7,8 +7,7 @@
   "type": "module",
   "scripts": {
     "devStart": "nodemon server.mjs",
-    "start": "npm run build && nodemon server.mjs",
-    "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
+    "start": "nodemon server.mjs"
   },
   "keywords": [
     "app"
