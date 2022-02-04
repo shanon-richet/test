@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "devStart": "nodemon server.mjs",
-    "start": "nodemon server.mjs",
+    "start": "npm run build && nodemon server.mjs",
     "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
   },
   "keywords": [
@@ -29,15 +29,12 @@
     "pg": "^8.7.1"
   },
   "engines": {
-    "node": "16.X"
+    "node": "16.X",
+    "npm": "^8.4.0"
   },
-<<<<<<< HEAD
   "eslintConfig": {
     "globals": {
       "window": true
     }
   }
-=======
-  "homepage": "https://github.com/shanon-richet/test#readme"
->>>>>>> 385a240258d96638889ed3c48e1f421cc1e3508a
 }
