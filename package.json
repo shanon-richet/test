@@ -31,9 +31,13 @@
   "engines": {
     "node": "16.X"
   },
+<<<<<<< HEAD
   "eslintConfig": {
     "globals": {
       "window": true
     }
   }
+=======
+  "homepage": "https://github.com/shanon-richet/test#readme"
+>>>>>>> 385a240258d96638889ed3c48e1f421cc1e3508a
 }
