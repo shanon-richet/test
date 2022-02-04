@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "name": "test",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanon-richet/test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shanon-richet/test/issues"
+  },
+  "homepage": "https://github.com/shanon-richet/test#readme"
+}
