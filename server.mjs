@@ -4,9 +4,11 @@ import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import pool from './config.mjs'
+import dotenv from 'dotenv'
 
 const app = express()
-const port = process.env.port || 3000
+const port = 3000
+dotenv.config()
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('dist'))
@@ -21,8 +23,9 @@ app.use(cookieSession({
 }))
 
 app.get('/', (req, res) => {
-    res.send('<h1>welcome</h1>')
+    res.status(200).json('welcome')
 })
+console.log(process.env.DBHOST)
 
 app.get('/api', (req, res) => {
     pool.query('select * from users;', (error, results) => {
@@ -33,6 +36,7 @@ app.get('/api', (req, res) => {
     })
 })
 
-app.listen(port, () => {
+
+app.listen(process.env.PORT || port, () => {
     console.log(`App is running on port ${port}`)
 })

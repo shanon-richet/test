@@ -16,8 +16,10 @@
     "dotenv": "^16.0.0"
   },
   "scripts": {
-    "devStart": "nodemon server.mjs",
-    "start": "npm install && nodemon server.mjs"
+    "start": "nodemon server.mjs",
+    "heroku-prebuild": "echo This runs before Heroku installs dependencies.",
+    "heroku-postbuild": "echo This runs after Heroku installs dependencies, but before Heroku prunes and caches dependencies.",
+    "heroku-cleanup": "echo This runs after Heroku prunes and caches dependencies."
   },
   "keywords": [
     "app"
@@ -29,7 +31,7 @@
   },
   "engines": {
     "node": "16.X",
-    "npm": "^8.4.0"
+    "npm": "8.x"
   },
   "eslintConfig": {
     "globals": {
