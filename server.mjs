@@ -6,11 +6,7 @@ import cors from 'cors'
 import pool from './config.mjs'
 
 const app = express()
-app.set('trust proxy', 1)
-
-const port = process.env.port || 5000
-
-app.set('view engine', 'ejs')
+const port = process.env.port || 3000
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('dist'))
@@ -21,14 +17,11 @@ app.use(cors())
 app.use(cookieSession({
     secret: 'secret',
     resave: false,
-    saveUninitialized: true,
-    maxAge: 24 * 60 * 60 * 1000
+    saveUninitialized: true
 }))
 
 app.get('/', (req, res) => {
-    res.send({
-        'path': 'home'
-    })
+    res.send('<h1>welcome</h1>')
 })
 
 app.get('/api', (req, res) => {
@@ -40,4 +33,6 @@ app.get('/api', (req, res) => {
     })
 })
 
-app.listen(port, () => console.log('Example'))
+app.listen(port, () => {
+    console.log(`App is running on port ${port}`)
+})

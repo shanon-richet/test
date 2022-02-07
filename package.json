@@ -5,6 +5,16 @@
   "main": "server.mjs",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "type": "module",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "node-postgres": "^0.6.2",
+    "pg": "^8.7.1",
+    "dotenv": "^16.0.0"
+  },
   "scripts": {
     "devStart": "nodemon server.mjs",
     "start": "npm install && nodemon server.mjs"
@@ -16,18 +26,6 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.15"
-  },
-  "dependencies": {
-    "body-parser": "^1.19.1",
-    "cookie-parser": "^1.4.6",
-    "cookie-session": "^2.0.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.0",
-    "ejs": "^3.1.6",
-    "express": "^4.17.2",
-    "express-session": "^1.17.2",
-    "node-postgres": "^0.6.2",
-    "pg": "^8.7.1"
   },
   "engines": {
     "node": "16.X",
